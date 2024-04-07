@@ -81,6 +81,7 @@ body {
 
 .status {
   margin-bottom: 10px;
+  background-color: yellow;
 }
 .game {
   display: flex;
@@ -89,4 +90,9 @@ body {
 
 .game-info {
   margin-left: 20px;
+}
+.game-current-desc{
+margin: 5px;
+border-radius: 10%;
+border-color:#e812aa;
 }

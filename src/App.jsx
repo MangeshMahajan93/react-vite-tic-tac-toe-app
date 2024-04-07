@@ -80,11 +80,11 @@ export default function Game() {
     if (move > 0) {
       description = 'Go to move #' + move;
     } else {
-      description = 'Go to game start';
+      description = 'Re start Game';
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className="game-current-desc" onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });

@@ -1,0 +1,32 @@
+/*
+Name : Mangesh Mahajan
+Tech Stack : React JS
+*/
+
+This code is a React implementation of the Tic Tac Toe game. Let's break it down step by step:
+
+Square Component:
+This component represents an individual square in the Tic Tac Toe board.
+It receives two props:
+value: The value of the square (X, O, or null).
+onSquareClick: A function to handle the click event on the square.
+When clicked, it triggers the onSquareClick function passed as a prop.
+Board Component:
+This component represents the game board consisting of 9 squares.
+It receives props such as xIsNext (to determine whose turn it is), squares (to represent the current state of the board), and onPlay (to handle the player's move).
+The handleClick function is invoked when a square is clicked. It checks whether the game is already won or the square is already filled. If not, it updates the board with the current player's move.
+It also checks for a winner using the calculateWinner function and updates the game status accordingly.
+The game status (status) is displayed above the board, indicating the winner, the next player, or if the game is a tie.
+The board is rendered with three rows, each containing three Square components.
+Game Component:
+This is the main component representing the Tic Tac Toe game.
+It manages the game state using the useState hook. It maintains history of moves and currentMove representing the index of the current move.
+It defines handlePlay function to handle the player's move and jumpTo function to jump to a specific move in the history.
+The list of moves is generated based on the history, and each move is rendered as a button. Clicking on a move button allows the player to jump to that specific move.
+The Board component is rendered within the Game component, passing necessary props.
+calculateWinner Function:
+This function determines if there is a winner based on the current state of the board (squares).
+It checks all possible winning combinations defined in lines.
+If any winning combination is found, it returns the winner ('X' or 'O').
+Otherwise, it returns null indicating no winner.
+Overall, this code provides a functional implementation of the Tic Tac Toe game using React, with features like tracking moves history, determining the winner, and displaying game status.
